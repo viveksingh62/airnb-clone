@@ -113,6 +113,9 @@ app.use("/", userRouter);
 // app.get("/", (req, res) => {
 //   res.send("server is working");
 // });
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
 
 app
   .route("/listings")
