@@ -1,0 +1,83 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+  <form method="post" action="/listings/<%=listings._id%>?_method=PUT" enctype="multipart/form-data">
+   
+
+<div class="col-8 offset-2 mt-3">
+    <h2>create new listing</h2>
+
+        <div class="mb-3">
+       
+
+          <label for="title" class="form-label">Enter the title</label>
+          <input
+            type="text"
+            value="<%= listings.title %>"
+            name="listing[title]"
+            class="form-control"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="description" class="form-label">Enter description</label>
+          <textarea
+            placeholder="enter description"
+            name="listing[description]"
+            class="form-control"
+          >
+ <%=listings.description %></textarea
+          >
+        </div>
+<div class="row">
+  <div class="mb-3 col-md-4">
+    <label for="price" class="form-label">Enter the price</label>
+    <input
+      type="text"
+      value="<%=listings.price %>"
+      name="listing[price]"
+      class="form-control"
+    />
+  </div>
+  
+  <div class="mb-3 col-md-8">
+    <label for="country" class="form-label">Enter country name</label>
+    <input
+      type="text"
+      value="<%=listings.country %> "
+      name="listing[country]" class="form-control"
+    />
+  </div>
+</div>
+        
+ <div class="mb-3">
+  Orginal Listing Image<br>
+          <img src="<%=orginalImageUrl%>" width="300px">
+        </div>
+        <div class="mb-3">
+          <label for="image" class="form-label">Upload new image</label>
+          <input
+            type="file"
+        
+            name="listing[image]"
+            class="form-control"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="location" class="form-label">Enter location</label>
+          <input
+            type="text"
+            value="<%=listings.location %> "
+            name="listing[location]"
+            class="form-control"
+          />
+        </div>
+
+
+        <button class="btn edit-btn mb-3">Submit</button>
+      
+
+  </form>
+
+</div>
+</body>
