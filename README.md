@@ -1,1 +1,1 @@
-https://airnb-k1ar.onrender.com/listings
+ Airbnb clone built with Node.js, Express, EJS, HTML, CSS, and JavaScript. Users can browse properties, add new listings, edit or delete their own listings, and upload images. The platform supports user authentication, property reviews, and interactive maps for visualizing property locations. This project demonstrates complete backend functionality with CRUD operations, server-side rendering, and a responsive user interface
