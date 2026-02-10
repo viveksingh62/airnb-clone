@@ -187,6 +187,14 @@ app.delete(
 //   console.log("sample was saved")
 //   res.send("successfull")
 // })
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    status: "ok",
+    uptime: process.uptime(),
+    timestamp: new Date()
+  });
+});
+
 app.listen(port, () => {
   console.log("server is listening");
 });
